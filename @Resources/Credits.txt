@@ -1,0 +1,10 @@
+Many thanks to:
+- The developers of Rainmeter for making this possible
+- The developers of Sublime Text 2 for the superb script editing program
+- The developers of GitHub for their awesome software and website
+- Kaelri of the Rainmeter forums for the wonderous Transitions lua script
+- MangeMouette of DeviantART for the Rain Updater skin and AutoIt executable which my updater is based on
+
+Included but not yet integrated:
+- Optimumx for the Shortcut and CleanUp executables
+- Nels-o of GitHub for the Toaster win 8 console notifications app
