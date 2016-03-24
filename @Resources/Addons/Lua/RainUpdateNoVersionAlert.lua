@@ -1,7 +1,7 @@
 function Update()
 
-	LatestVersion = SKIN:GetMeasure('AvailableDownloadVersionBeta'):GetStringValue()
-	CurrentVersion = SKIN:GetVariable('RainVersion')
+	LatestVersion = SKIN:GetMeasure('MeasureLatestVersion'):GetStringValue()
+	CurrentVersion = SKIN:GetVariable('RainUpdateVersion')
 	if (CurrentVersion=="" or CurrentVersion>=LatestVersion) then
 		return 0
 	else

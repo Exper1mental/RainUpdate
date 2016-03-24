@@ -16,18 +16,8 @@
 
 ;~~~ Fonts ~~~
  Font=Segoe UI
- ; This is the font used in situations that may not be fitting to using the FontLight variable's font.
- ; The best way to see what it effects is to change it to a different font.
+ FontBold=Segoe UI Bold
  FontLight=Segoe UI Light
- ; This is the font used for most of the text in the skins.
- ; The best way to see what it effects is to change it to a different font.
- FontSemilight=Segoe UI Semilight
- FontSemibold=Segoe UI Semibold
- FontDetail=Candara
- FontInfo=Utsaah
- ; The above four font variables currently do not effect anything.
- ; They are variables I used in the past that now should be obselete.
- ; I keep these here in case I decide to reuse them for something.
 
 
 ;~~~ Colors ~~~
@@ -53,56 +43,23 @@
  SecondaryColor=120,120,120
  SecondaryColorAlpha=255
 
-; --- Color Scheme Presets ---
- ; Not sure what you want your Charms bar to look like?
- ; Try using these awesome presets made to inspire your imagination!
- ;
- ; - Light Color Scheme -
- ; BackgroundColor=255,255,255
- ; BackgroundColorAlpha=128
- ; AccentColor=160,160,160
- ; AccentAlpha=128
- ; PrimaryColor=0,0,0
- ; PrimaryColorAlpha=255
- ; SecondaryColor=95,95,95
- ; SecondaryColorAlpha=255
- ;
- ; - Dark Color Scheme -
- ; BackgroundColor=0,0,0
- ; BackgroundColorAlpha=128
- ; AccentColor=95,95,95
- ; AccentAlpha=128
- ; PrimaryColor=255,255,255
- ; PrimaryColorAlpha=255
- ; SecondaryColor=160,160,160
- ; SecondaryColorAlpha=255
- ; 
- ; - Bengal Red Color Scheme -
- ; BackgroundColor=20,20,20
- ; BackgroundColorAlpha=180
- ; AccentColor=203,48,48
- ; AccentAlpha=128
- ; PrimaryColor=203,48,48
- ; PrimaryColorAlpha=255
- ; SecondaryColor=120,120,120
- ; SecondaryColorAlpha=255
 
 
 ;~~~ Updates ~~~
 ; Note: This also includes variables used in the Update skin.
  AutoCheck=0
- ; This determines whether or not the Charms bar will occasionally check for Rainmeter and Charms updates
+ ; This determines whether or not the Charms bar will occasionally check for Rainmeter and RainUpdate updates
  ; in the background. This does not impede or effect the use of the Update skin for manually checking updates.
- ; If set to "0" then the Charms Bar will not check for updates
- ; If set to "1" then the Charms Bar will check for updates
+ ; If set to "0" then the ____ will not check for updates
+ ; If set to "1" then the ____ will check for updates
 
 
  ;--- Rainmeter Updater ---
- RainVersion=0.0.0.0000
+ RainmeterVersion=0.0.0.0000
  ; Please do not tamper with this variable. It has been set to 0.0.0.0000 intentionally. If you haven't noticed
  ; already this is NOT the value displayed in the Updater skin. Rather, this is the value used before the Update
  ; skin retrieves the installed version of Rainmeter.
- RainVersionType=Final
+ RainmeterVersionType=Final
  ; This determines the type of Rainmeter updates the Updater skin will look for when there is an internet connection
  ; There are two acceptable values for this variable:
  ;    1. Set to "Final". This will only check for the latest Final release of Rainmeter
@@ -114,96 +71,8 @@
  ; Just an obsolete variable I have left here for whatever reason...
 
 
- ;--- Charms Updater ---
- CharmsVersion=0.9.0
- ; Please do not tamper with this variable. This is used to compare your version of Charms to the latest version of Charms.
+ ;--- RainUpdate Updater ---
+ RainUpdateVersion=0.9.0
+ ; Please do not tamper with this variable. This is used to compare your version of RainUpdate to the latest version of RainUpdate.
  ; Changing this will interfere with the ability of skin to accurately see if there is an update available.
 
-
-
-
-
-;=== Charms Skin Variables ===
- TimeFormat=12
- ; This should be pretty straightforward.
- ; Use "12" if you prefer standard time
- ; Use "24" if you prefer military time
-
-
-
-
-;=== Search Skin Variables ===
- ; Documentation 
- ; Within the search skin you can choose between 14 preset search engines, 11 online and 3 local:
- ;      Online
- ;          - Google
- ;          - DuckDuckGo
- ;          - Bing
- ;          - Yahoo
- ;          - Wikipedia
- ;          - Amazon
- ;          - YouTube
- ;          - IMDB
- ;          - Reddit
- ;          - DeviantArt
- ;          - Rainmeter Forums
- ;      Local
- ;          - Command Prompt
- ;          - Windows Explorer
- ;          - Locate32
- ; Alternatively, you can use your own search engine by editing the below settings.
- ; Bear in mind if you set another search engine to be your default (by right clicking on it), anything you
- ; have entered for most of these variables will be lost.
- 
- SearchName=Explorer
- ; This is name of the search engine you are using (i.e. Explorer, Google, DeviantArt, etc.)
- ; It does NOT have to be the actual name of the search engine, just something short to remind you what
- ; you are searching with.
- SearchURL=search-ms:query=$UserInput$&crumb=location:#SearchPath#
- ;%Comspec% "$UserInput$"
- ;%Comspec% /k taskkill /im $UserInput$.exe
- ;https://technet.microsoft.com/en-us/library/bb490880.aspx#EBAA
- ;;["cmd.exe" "/k $UserInput$"]
- ; search-ms:query=$UserInput$&crumb=location:#SearchPath#
- SearchPath=shell:::{20d04fe0-3aea-1069-a2d8-08002b30309d}&
- ; This variable is only used by the Windows Explorer search
- ; It sets where Exploreres will search for your query (it set to This PC by default, which searches your 
- ; entire PC)
- SearchCmd=2
- SearchCmd2=[!WriteKeyValue Variables SearchCmd "2" "#@#Variables.inc"]
- SetSearchCmd2=[!SetVariable SearchCmd "2"]
- SearchCmd3=[!WriteKeyValue Variables SearchCmd "3" "#@#Variables.inc"]
- SetSearchCmd3=[!SetVariable SearchCmd "3"]
- ; Please do not tamper with the above variables unless you know what you are doing.
- PathToLocate32=#@#Addons\Locate32\Locate32.exe
- ; As it says, this is used as the path to Locate32.
- ; It is advised you do not change this unless you know what you are doing.
-
-
-
-
-;=== Music Skin Variables ===
-;~~~ Players ~~~
- MusicPlayer=Spotify
- PlayerName=Spotify
- MusicMeasure=MeasureSpotify
-
-
-
-
-;=== Weather Skin Variables ===
- WeatherCode=29644
- ;USNY0996
- ; For best results please use your ZIP code or your Weather.com weather code
- WeatherIcons=ClimaconsWhite
- ;PlainWeatherIconsWhite
- Unit=F
-  ; This variable changes the temperature unit that is used.
-  ; Setting this to "F" will change your weather unit to Fahrenheit
-  ; Setting this to "M" will change your weather unit to Celsius
- Unit1=F
- Unit2=M
- ; Please do not tamper with the above variables unless you know what you are doing.
- WeatherUnitAutodetect=0
- ; This determines whether or not Charms uses your system weather unit or the skin weather unit (which
- ; is above and called Unit)
